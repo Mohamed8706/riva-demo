@@ -1,5 +1,5 @@
 import { Navigation } from "../components/utils/Navigation";
-import { HeroSection } from "../components/sections/HeroSection";
+import  HeroSection  from "../components/sections/HeroSection";
 import HealthConditionsSection from "../components/sections/HealthConditionsSection";
 import FAQSection from "../components/sections/FaqSection";
 import TestimonialsSection from "../components/sections/TestimonialsSection";

@@ -1,6 +1,8 @@
+import { useNavigate } from "react-router-dom";
 import "../../styles/globals.css"
-export function HeroSection() {
+export default function HeroSection() {
 
+  const navigate = useNavigate();
   return (
     <section className="relative min-h-150 md:min-h-175 overflow-hidden">
       {/* Background decorative elements */}
@@ -21,7 +23,7 @@ export function HeroSection() {
               Connect with top-tier specialists, track your health metrics, and manage appointments seamlessly through our secure ecosystem.
             </p>
             <div className="flex flex-col items-center md:justify-left md:flex-row gap-4 md:w-auto">
-              <button className="button-64" role="button"><span className="text">Get Started</span></button>
+              <button onClick={() => navigate("/roles")} className="button-64" role="button"><span className="text">Get Started</span></button>
               <button className="px-6 md:px-8 py-3 md:py-4 cursor-pointer bg-white/80 border-2 border-sky-500 text-sky-500 rounded-3xl plus-jakarta-sans font-bold text-base md:text-lg shadow-lg hover:bg-sky-50 transition-colors">
                 Learn More
               </button>
