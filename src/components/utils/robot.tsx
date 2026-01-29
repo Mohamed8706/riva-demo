@@ -72,7 +72,7 @@ export function RobotAssistant() {
             }}
             >
               <img
-                src="../../../public/robot.png" 
+                src="/robot.png" 
                 alt="Robot Assistant"
                 className="w-14 h-14 md:w-24 md:h-24 object-contain"
               />

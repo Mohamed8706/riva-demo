@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { Upload, Clock, DollarSign, User, Heart, Stethoscope } from 'lucide-react';
 import { Navigation } from '../components/utils/Navigation';
-import registerbg from '../../public/register.png';
+
 
 export default function RegisterPage() {
   const [searchParams] = useSearchParams();
@@ -117,7 +117,7 @@ export default function RegisterPage() {
       <div className="max-w-4xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden">
         {/* Header / Hero */}
         <div className="relative h-64">
-          <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${registerbg})` }} />
+          <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(/register.png)` }} />
           <div className="absolute inset-0 bg-black/30" />
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="text-center text-white px-6">

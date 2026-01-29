@@ -3,7 +3,6 @@ import { Menu, X } from "lucide-react";
 import { useNavigate, NavLink } from "react-router-dom";
 import { useState } from "react";
 
-const logo = "../../../public/logo.png";
 
 export function Navigation() {
   const navigate = useNavigate();
@@ -31,7 +30,7 @@ export function Navigation() {
             onClick={() => navigate("/")}
             aria-hidden
           >
-            <img src={logo} alt="RIVA Logo" className="w-20 h-20 object-contain rounded-lg" />
+            <img src="/logo.png" alt="RIVA Logo" className="w-20 h-20 object-contain rounded-lg" />
           </div>
 
           {/* Navigation Links */}
@@ -108,7 +107,7 @@ export function Navigation() {
               className="fixed top-0 right-0 h-full w-80 bg-white shadow-2xl z-50 p-6"
             >
               <div className="flex items-center justify-between mb-6">
-                <img src={logo} alt="RIVA Logo" className="h-10 w-10 object-contain" />
+                <img src="/logo.png" alt="RIVA Logo" className="h-10 w-10 object-contain" />
                 <button onClick={toggleMobileMenu} className="p-2 rounded-md hover:bg-slate-100">
                   <X className="size-6" />
                 </button>

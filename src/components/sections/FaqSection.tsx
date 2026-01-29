@@ -1,4 +1,3 @@
-import robot from '../../../public/robot.png';
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "../ui/accordion";
 
 export default function FAQSection() {
@@ -41,7 +40,7 @@ export default function FAQSection() {
             <div className="hidden md:flex justify-center lg:justify-start">
               <div className="w-64 md:w-80 hover:scale-[103%] transform transition-transform cursor-pointer">
                 <img
-                  src={robot}
+                  src="/robot.png"
                   alt="FAQ illustration"
                   className="w-full h-auto object-contain"
                 />

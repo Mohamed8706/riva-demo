@@ -1,4 +1,3 @@
-import robot from '../../../public/robot-with-light.png';
 import { Heart, Brain, Droplet } from "lucide-react";
 export default function HealthConditionsSection() {
   const conditions = [
@@ -75,7 +74,7 @@ export default function HealthConditionsSection() {
           <div className="hidden md:flex justify-center">
             <div className="w-full max-w-md hover:scale-[103%] transform transition-transform cursor-pointer">
               <img 
-                src={robot} 
+                src="/robot.png" 
                 alt="Healthcare support" 
                 className="w-full h-auto object-contain"
               />

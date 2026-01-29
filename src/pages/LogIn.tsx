@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { Eye, EyeOff, Home, Lock, Mail } from 'lucide-react';
-import doctorImage from '../../public/doctor.jpg';
 import { NavLink, useNavigate } from 'react-router-dom';
 
 export default function LoginPage() {
@@ -22,7 +21,7 @@ export default function LoginPage() {
       <div className="hidden lg:flex lg:w-1/2 relative overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center brightness-75 blur-xs pointer-events-none"
-          style={{ backgroundImage: `url(${doctorImage})` }}
+          style={{ backgroundImage: `url(/doctor.jpg)` }}
           aria-hidden
         />
 

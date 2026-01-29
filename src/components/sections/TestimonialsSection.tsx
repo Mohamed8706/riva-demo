@@ -1,5 +1,3 @@
-import robot from '../../../public/robot.png';
-import imgRectangle from '../../../public/frame.png';
 export default function TestimonialsSection() {
   const testimonials = [
     {
@@ -31,7 +29,7 @@ export default function TestimonialsSection() {
             <div className="lg:col-span-1 mt-8 hidden md:flex justify-start">
              <div className="w-auto hover:scale-[103%] transform transition-transform cursor-pointer">
                 <img 
-                src={robot} 
+                src="/robot.png"
                 alt="Decoration" 
                 className="w-full h-auto object-contain"
                 />
@@ -61,7 +59,7 @@ export default function TestimonialsSection() {
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 rounded-full overflow-hidden shrink-0">
                   <img 
-                    src={imgRectangle} 
+                    src="/frame.png" 
                     alt={testimonial.name} 
                     className="w-full h-full object-cover"
                   />

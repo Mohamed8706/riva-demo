@@ -1,6 +1,5 @@
 // AboutUsSection.tsx
 import { Bot, Heart } from "lucide-react"; // Bot for robot/AI, Heart for love/care
-import robot from '../../../public/robot-heart.png';
 export default function AboutUsSection() {
   const features = [
     {
@@ -68,7 +67,7 @@ export default function AboutUsSection() {
         
             <div className="absolute -top-12 md:right-[50%] transform translate-x-1/2 opacity-80 pointer-events-none hidden md:block">
               <div className="md:w-22 md:h-22 bg-linear-to-br from-blue-400 to-cyan-400 rounded-full flex items-center justify-center shadow-lg">
-                <img src={robot} alt="Robot Illustration" className="w-16 h-16 md:w-20 md:h-20" />
+                <img src="/robot.png" alt="Robot Illustration" className="w-16 h-16 md:w-20 md:h-20" />
               </div>
             </div>
           </div>

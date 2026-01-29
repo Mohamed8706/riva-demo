@@ -1,6 +1,4 @@
 import { Calendar, Mail, Phone } from 'lucide-react';
-import robot from '../../../public/robot-heart.png';
-import logo from '../../../public/logo.png';
 function CTASection() {
   return (
     <section id='contact' className="py-12 md:py-20 px-4 md:px-8">
@@ -11,7 +9,7 @@ function CTASection() {
             <div className="flex items-start gap-4">
               <div className="w-16 md:w-24 shrink-0">
                 <img 
-                  src={logo} 
+                  src="/logo.png"
                   alt="Care icon" 
                   className="w-full h-auto object-contain"
                 />
@@ -47,7 +45,7 @@ function CTASection() {
           <div className="hidden md:flex justify-center lg:justify-end">
             <div className="w-full max-w-md">
               <img 
-                src={robot} 
+                src="/robot.png" 
                 alt="Healthcare professional" 
                 className="w-full h-auto object-contain"
               />

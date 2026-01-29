@@ -10,7 +10,6 @@ import {
   Activity,
   MessageSquare
 } from "lucide-react";
-import logo from "../../../public/logo.png";
 import { NavLink } from "react-router-dom";
 import "./dasboard.css";
 
@@ -39,7 +38,7 @@ export function Sidebar({ isOpen, onToggle }: SidebarProps) {
       {/* Logo */}
       <NavLink to={"/"}>
       <div className="h-16 flex items-center justify-center border-b border-gray-200 px-4">
-        <img src={logo} alt="RIVA Logo" className="h-14 w-14 object-contain" />
+        <img src="/logo.png" alt="RIVA Logo" className="h-14 w-14 object-contain" />
       </div>
         </NavLink>
 

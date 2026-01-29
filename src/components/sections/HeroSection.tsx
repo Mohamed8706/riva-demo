@@ -1,4 +1,3 @@
-import HeroImage from '../../../public/robot.png';
 import "../../styles/globals.css"
 export function HeroSection() {
 
@@ -33,7 +32,7 @@ export function HeroSection() {
           <div className="relative hidden md:flex justify-center lg:justify-end z-10">
             <div className="w-full max-w-md lg:max-w-lg xl:max-w-xl hover:scale-[103%] transform transition-transform cursor-pointer">
               <img 
-                src={HeroImage} 
+                src="/robot.png" 
                 alt="Healthcare professional" 
                 className="w-full h-auto object-contain"
               />
