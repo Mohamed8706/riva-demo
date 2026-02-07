@@ -18,7 +18,7 @@ import CaregiverMedicationsTab from "../components/dashboard/CaregiverMedication
 
 export default function Dashboard() {
   const [activeTab, setActiveTab] = useState("overview");
-  const [userRole, setUserRole] = useState("caregiver"); // TODO: load from auth context (patient, doctor, caregiver)
+  const [userRole, setUserRole] = useState("patient"); // TODO: load from auth context (patient, doctor, caregiver)
 
   return (
     <div className="min-h-screen bg-gray-100 flex">
