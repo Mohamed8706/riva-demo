@@ -18,7 +18,7 @@ import CaregiverMedicationsTab from "../components/dashboard/CaregiverMedication
 
 export default function Dashboard() {
   const [activeTab, setActiveTab] = useState("overview");
-  const [userRole, setUserRole] = useState("patient"); // TODO: load from auth context (patient, doctor, caregiver)
+  const [userRole, setUserRole] = useState("caregiver"); // TODO: load from auth context (patient, doctor, caregiver)
 
   return (
     <div className="min-h-screen bg-gray-100 flex">
@@ -32,11 +32,11 @@ export default function Dashboard() {
       </motion.div>
 
       {/* Main Content */}
-      <main className="flex-1 overflow-auto">
+      <main className="flex-1 overflow-auto ml-16 md:ml-0">
         <DashboardHeader />
-        
+
         {/* Tab Content */}
-        <div className="p-8">
+        <div className="p-4 md:p-8">
           {/* PATIENT TABS */}
           {userRole === "patient" && (
             <>

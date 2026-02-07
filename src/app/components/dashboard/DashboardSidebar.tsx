@@ -52,8 +52,8 @@ export default function DashboardSidebar({ activeTab, setActiveTab, userRole = "
   }
 
 
-  return (
-    <aside className="w-72 bg-white border-r border-gray-200 flex flex-col shadow-lg">
+  const SidebarContent = () => (
+    <>
       {/* Logo */}
       <div className="p-6 border-b border-gray-200 w-full">
         <Link to="/" className="flex items-center justify-center w-full gap-3">
@@ -111,14 +111,16 @@ export default function DashboardSidebar({ activeTab, setActiveTab, userRole = "
         {navItems.map((item) => (
           <button
             key={item.id}
-            onClick={() => setActiveTab(item.id)}
-            className={`w-full flex items-center gap-3 px-4 py-4 rounded-xl inter-sans font-semibold text-lg transition-all ${
+            onClick={() => {
+                setActiveTab(item.id);
+              }}
+              className={`w-full flex items-center gap-3 px-3 md:px-4 py-2 md:py-4 rounded-xl inter-sans font-semibold text-sm md:text-lg transition-all ${
               activeTab === item.id
                 ? "bg-gradient-to-r from-sky-500 to-sky-600 text-white shadow-lg"
                 : "text-gray-700 hover:bg-gray-50"
             }`}
           >
-            <item.icon className="w-6 h-6" />
+              <item.icon className="w-5 h-5 md:w-6 md:h-6" />
             {item.label}
           </button>
         ))}
@@ -126,14 +128,51 @@ export default function DashboardSidebar({ activeTab, setActiveTab, userRole = "
 
       {/* Logout */}
       <div className="p-4 border-t border-gray-200">
-        <button
-          onClick={handleLogout}
-          className="w-full flex items-center gap-3 px-4 py-4 rounded-xl inter-sans font-semibold text-lg text-red-600 hover:bg-red-50 transition-all"
-        >
+        <button onClick={() => handleLogout()} className="w-full flex items-center gap-3 px-3 md:px-4 py-2 md:py-4 rounded-xl inter-sans font-semibold text-sm md:text-lg text-red-600 hover:bg-red-50 transition-all">
           <LogOut className="w-6 h-6" />
           Logout
         </button>
       </div>
-    </aside>
+    </>
+  );
+
+  return (
+    <>
+      {/* Mobile: Slim (folded) sidebar shown by default on small screens */}
+      <div className="md:hidden fixed inset-y-0 left-0 z-50 w-16 bg-white border-r border-gray-200 flex flex-col items-center py-3 space-y-2">
+        <div className="flex-1 flex flex-col items-center w-full mt-1 space-y-2 overflow-y-auto">
+          {navItems.map((item) => (
+            <button
+              key={item.id}
+              onClick={() => {
+                setActiveTab(item.id);
+              }}
+              title={item.label}
+              className={`w-10 h-10 flex items-center justify-center rounded-md transition-colors ${
+                activeTab === item.id ? "bg-gradient-to-r from-sky-500 to-sky-600 text-white" : "text-gray-600 hover:bg-gray-100"
+              }`}
+            >
+              <item.icon className="w-5 h-5" />
+            </button>
+          ))}
+        </div>
+
+        <div className="w-full flex flex-col items-center gap-2">
+          <button onClick={() => navigate('/profile')} title="Profile" className="p-2 rounded hover:bg-gray-100">
+            <User className="w-6 h-6 text-gray-600" />
+          </button>
+          <button onClick={() => handleLogout()} title="Logout" className="p-2 rounded hover:bg-gray-100">
+            <LogOut className="w-5 h-5 text-red-600" />
+          </button>
+        </div>
+      </div>
+
+      {/* removed expand/overlay behavior: slim icon-only bar remains on mobile */}
+
+      {/* Desktop sidebar */}
+      <aside className="hidden md:flex md:w-72 bg-white border-r border-gray-200 flex-col shadow-lg">
+        <SidebarContent />
+      </aside>
+    </>
   );
 }
