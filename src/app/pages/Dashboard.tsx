@@ -15,6 +15,7 @@ import DoctorRecordsTab from "../components/dashboard/DoctorRecordsTab";
 import CaregiverOverviewTab from "../components/dashboard/CaregiverOverviewTab";
 import CaregiverAppointmentsTab from "../components/dashboard/CaregiverAppointmentsTab";
 import CaregiverMedicationsTab from "../components/dashboard/CaregiverMedicationsTab";
+import RoleSwitcher from "../components/dashboard/RoleSwitcher";
 
 export default function Dashboard() {
   const [activeTab, setActiveTab] = useState("overview");
@@ -68,6 +69,8 @@ export default function Dashboard() {
           )}
         </div>
       </main>
+      <RoleSwitcher userRole={userRole} setUserRole={setUserRole} setActiveTab={setActiveTab} />
+
     </div>
   );
 }
