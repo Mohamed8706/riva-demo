@@ -9,6 +9,8 @@ import FeaturesSection from "../../app/components/home/FeaturesSection";
 import DoctorsSection from "../../app/components/home/DoctorsSection";
 import SeniorPatientsSection from "../../app/components/home/SeniorPatientsSection";
 import CTASection from "../../app/components/home/CTASection";
+import { DiseaseCareSection } from "../components/home/DiseaseCareSection";
+import { BookConsultationCTA } from "../components/home/BookConsultationSection";
 
 export default function Home() {
   return (
@@ -16,9 +18,11 @@ export default function Home() {
       <Navbar />
       <HeroSection />
       <HowItWorksSection />
+      <DiseaseCareSection />
       <FeaturesSection />
       <DoctorsSection />
       <SeniorPatientsSection />
+      <BookConsultationCTA />
       <CTASection />
       <Footer />
     </div>
